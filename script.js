@@ -49,12 +49,12 @@ for (const button of callButtons) {
     li.classList.add("history-item", "mb-2", "flex", "justify-between", "items-start");
 
     li.innerHTML = `
-      <div class="flex xl:justify-center justify-between items-center gap-2 bg-[#FAFAFA] rounded-lg shadow-md w-full p-2">
-        <div class="flex flex-col">
+      <div class="flex xl:justify-center justify-between items-center gap-1 bg-[#FAFAFA] rounded-lg shadow-md w-full p-2">
+        <div class="flex flex-col m-0 p-0">
           <p class="history-title font-hind font-semibold text-sm pb-2">${title}</p>
           <p class="history-number text-xs text-gray-700">${number}</p>
         </div>
-        <div class="xl:w-1/2">
+        <div class=" m-0 p-0">
           <p class="history-time text-xs text-gray-500 ">${time}</p>
         </div>
       
