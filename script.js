@@ -1,4 +1,4 @@
-
+// console.log("JS file is connected");
 
 const callButtons = document.getElementsByClassName("btn-call");
 
@@ -23,7 +23,7 @@ for (const button of callButtons) {
 
 
     // Card container
-    const card = event.target.parentElement.parentElement.parentElement;
+    const card = event.target.parentElement.parentElement;
 
 
     const title = card.querySelector(".title").innerText;
@@ -65,7 +65,8 @@ for (const button of callButtons) {
     callList.appendChild(li);
 
   });
-}
+};
+
 
 // For Clear history
 clearBtn.addEventListener("click", function () {
@@ -82,8 +83,41 @@ let heartCount = parseInt(heartCountValue.innerText);
 
 for (const heart of hearts) {
   heart.addEventListener("click", function () {
-    heartCount++; 
+    heartCount++;
     heartCountValue.innerText = heartCount;
 
+    heart.classList.toggle("text-red-500");
+    heart.classList.toggle("fa-solid");
+
+
   });
-}
+};
+
+// For copy button click and copy count
+
+const copyButtons = document.getElementsByClassName("btn-copy");
+const copyCountValue = document.getElementById("copy-count");
+
+
+let copyCount = parseInt(copyCountValue.innerText);
+
+for (const button of copyButtons) {
+  button.addEventListener("click", function (event) {
+    event.preventDefault();
+
+
+    const card = event.target.parentElement.parentElement;
+
+
+    const number = card.querySelector(".number").innerText;
+
+
+    navigator.clipboard.writeText(number).then(function () {
+      alert(`Number ${number} copied to clipboard!`);
+
+      copyCount++;
+      copyCountValue.innerText = copyCount;
+
+    })
+  });
+};
