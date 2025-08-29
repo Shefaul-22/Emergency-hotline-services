@@ -50,12 +50,12 @@ for (const button of callButtons) {
 
     li.innerHTML = `
       <div class="flex xl:justify-center justify-between items-center gap-1 bg-[#FAFAFA] rounded-lg shadow-md w-full p-2">
-        <div class="flex flex-col m-0 p-0">
+        <div class="xl:w-2/3 flex flex-col m-0 p-0">
           <p class="history-title font-hind font-semibold text-sm pb-2">${title}</p>
           <p class="history-number text-xs text-gray-700">${number}</p>
         </div>
-        <div class=" m-0 p-0">
-          <p class="history-time text-xs text-gray-500 ">${time}</p>
+        <div class="xl:w-1/3 m-0 p-0">
+          <p class="history-time font-light text-xs text-gray-500 ">${time}</p>
         </div>
       
       </div>
