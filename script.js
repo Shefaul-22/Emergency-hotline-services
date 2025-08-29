@@ -22,7 +22,7 @@ for (const button of callButtons) {
     }
 
 
-    // Card container
+    // Card container (parent)
     const card = event.target.parentElement.parentElement;
 
 
